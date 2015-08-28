@@ -1,0 +1,22 @@
+<table width='100%' align='center' cellspacing='0'>
+	<tr>
+	    <td align='left' bgcolor='#FFFFFF'>
+	     <p><font face='verdana' size='4' color='#328639'><strong>Library Survey</strong></font></p>
+	     <p><font face='verdana' size='2' color='#328639'>Let us know what you think! Thank you for taking time to answer the following survey(s) and provide us with your valuable feedback.</font></p>
+	    </td>
+	</tr>
+	
+	<tr><td align='center' bgcolor='#FFFFFF'>
+     	    <table align='center'>
+       		<tr><td><ul>{SURVEYLIST}</ul></td></tr>
+     	    </table>
+	</td></tr>  
+	
+	<tr><td><img src="{TEMPLATEURL}spacer.gif" height="70"></td></tr>      
+   
+     	 <tr>
+            <td align='center' bgcolor='#FFFFFF' valign='top'>             
+             <a href='http://www.limesurvey.org' target='_blank'><img src='{TEMPLATEURL}limesurvey_logo.png' border='0' title='LimeSurvey' /></a>
+            </td>
+      </tr>     
+</table>

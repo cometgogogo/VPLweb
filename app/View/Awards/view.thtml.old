@@ -1,0 +1,88 @@
+<?php $html->addCrumb("Home" , "/"); ?>
+<?php $html->addCrumb("Books, Materials & Research Tools" , "/materials"); ?>
+<?php $html->addCrumb("Recommended reads" , "/materials/recommended"); ?>
+<?php $html->addCrumb("Award Winners" , "/awards"); ?>
+
+
+<div id="page_header">
+	<div class="opening"></div>
+	<div class="details">
+		<h1><?php echo $award['Award']['name']?></h1>
+	</div>
+	<div class="closing"></div>
+</div>
+
+<div id="page_content">
+	<div class="opening"></div>
+	<div class="details">
+		<p class="intro">
+			<?php echo $award['Award']['description']?>
+		</p>
+
+		<p>
+
+
+		<?php if(!empty($award['Award']['website'])) { ?>
+		<h2>Official website</h2>
+				<?php echo str_replace ( array("&","+","%","/"), array("&<wbr>","+<wbr>","%<wbr>","/<wbr>"), $award['Award']['website']); ?>
+				<br />
+				<?php echo $html->link("Visit site", $award['Award']['website'], array("target"=>"_blank")); ?>
+		</p>
+		<?php } ?>
+
+		<p>
+		<h2>Past winners</h2>
+		<?php foreach ($myWinners as $awardWinner) { ?>
+			<div class="">
+				<h3><?php
+					echo $awardWinner['year'];
+					if ($awardWinner['CatID']!=0) {
+						echo " ", $awardWinner['Category'];
+					}
+					?>
+				</h3>
+				<div class="book_list">
+
+					<?php if(!empty($awardWinner['title'])) { ?>
+						<?php echo "<div class='title'>" . $awardWinner['title'] . "</div>"; ?>,
+					<?php } ?>
+
+
+					<?php echo "<div class='author'>" . $awardWinner['author'] . "</div>"; ?>
+					<form method="post" action="http://66.146.131.168/cgi-bin/gw/chameleon">
+						<input type="submit" class="catalog_link" value="Find in catalogue">
+						<input type="hidden" name="t1" value="<?php echo $awardWinner['author']; ?>" />
+						<input type="hidden" name="u1" value="1003" />
+						<?php if(!empty($awardWinner['title'])) { ?>
+							<input type="hidden" name="op1" value="AND" />
+							<input type="hidden" name="t2" value="<?php echo $awardWinner['title']; ?>" />
+							<input type="hidden" name="u2" value="4" />
+						<?php } ?>
+						<input type="hidden" name="skin" value="vaughan" />
+						<input type="hidden" name="inst" value="consortium" />
+						<input type="hidden" name="submittheform" value="" />
+						<input type="hidden" name="usersrch" value="1" />
+						<input type="hidden" name="beginsrch" value="1" />
+						<input type="hidden" name="elementcount" value="3" />
+						<input type="hidden" name="function" value="INITREQ" />
+						<input type="hidden" name="search" value="KEYWORD" />
+						<input type="hidden" name="rootsearch" value="KEYWORD" />
+						<input type="hidden" name="lng" value="en" />
+						<input type="hidden" name="pos" value="1" />
+						<input type="hidden" name="conf" value="./chameleon.conf" />
+						<input type="hidden" name="patronhost" value="localhost 1111 DEFAULT" />
+						<input type="hidden" name="sortby" value="pubti">
+						<input type="hidden" name="sortdirection" value="1">
+						<input type="hidden" name="host" value="localhost+1111+DEFAULT" />
+					</form>
+					<!--
+					<?php echo $html->link("Submit a review","/reviews/add?title=".$awardWinner['title']."&author=".$awardWinner['author'], array("class"=>"catalog_link")); ?>
+					<?php echo $html->link("Reader reviews","/reviews/index/".$awardWinner['title']."/".$awardWinner['author'], array("class"=>"catalog_link")); ?>
+					-->
+				</div>
+			</div>
+		<?php } ?>
+		</p>
+	</div>
+	<div class="closing"></div>
+</div>

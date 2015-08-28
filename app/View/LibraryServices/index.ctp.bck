@@ -1,0 +1,328 @@
+<?php
+$html->addCrumb("Home" , "/");
+$html->addCrumb("Using the Library" , "/services");
+?>
+<?php
+	$relatedContentElements = array	();
+	//$relatedContentElements[] = array ('calendar', array("targetDate"=>$date));
+	$relatedContentElements[] = array ('related_pages', array("pages"=>array(array("Title"=>"Service Charges","url"=>"/services/service_charges"),array("Title"=>"Locations & Hours","url"=>"/libraries"),array("Title"=>"Borrowing Materials","url"=>"/services/borrowing"),array("Title"=>"Downloads & Digital","url"=>"/materials/downloads_digital"))));
+	$this->controller->set('relatedContentElements', $relatedContentElements);
+?>
+
+<div id="page_header">
+	<div class="opening"></div>
+	<div class="details">
+		<h1>Library Services</h1>
+	</div>
+	<div class="closing"></div>
+</div>
+
+<div id="page_content">
+	<div class="opening"></div>
+	<div class="details">
+		<div class="intro"></div>
+		<div class="entry">
+	<div id="tabs" class="ui-tabs-nav">
+
+	<ul>
+		<li><a href="#computer">Public Computers</a></li>
+		<li><a href="#room">Book a Room</a></li>
+		<li><a href="#proctor">Exam Proctoring</a></li>
+		<li><a href="#club">Book Clubs</a></li>
+		<li><a href="#homebound">Homebound Services</a></li>
+		<li><a href="#cela">CELA Services</a></li>
+	</ul>
+
+
+<div style="display: none !important;"><h2>Library Service</h2></div>
+
+	<div id="computer" class="tab">
+
+	<div class="entry">
+	
+	<h3>iPads for Loan</h3>
+	<p>iPads are available for the customers to <a href="https://catalogue.vaughanpl.info/catalogue/lib/item?id=chamo:707366">check out</a> at all VPL location. The iPads have been loaded with library apps. </p>
+	
+	<h3>Notebooks</h3>
+	<p>Notebooks are available for up to 2 hours loan, for in-library use. <br/><br/> Available at <?php echo $html->link("all VPL locations","/libraries"); ?> except <?php echo $html->link("Kleinburg Library","/libraries/view/5"); ?>.</p>
+
+		
+
+		<h3>Internet Access</h3>
+		<p>All libraries have workstations which provide the public with free access to the Internet. While using the Internet in each of the branches, customers are expected to read and abide by the <a href="/about/internet_policy">VPL Internet Policy</a>. Customers can book a computer at the self-service reservation station at Dufferin Clark Library and Maple Library. </p>
+
+       		 <h3>Wireless Internet Access</h3>
+		<p>As long as your hardware complies to one of the standards that our wireless supports (802.11a, 802.11b, 802.11g, 802.11n, 802.11ac) just open your computer or device and away you go! Available at all VPL branches.
+		</p>
+
+		<h3>Word Processing</h3>
+		<p>
+			All VPL locations provide free access to computers equipped with Microsoft Word, Excel and Powerpoint. The workstations are provided for the public on a self-serve basis. Library staff may provide limited assistance, if time permits, but are not able to provide training on the use of PCs or the software. Customers can book a computer at the self-service reservation station at Dufferin Clark Library and Maple Library.
+		</p>
+		<p>
+			In order to save their work, customers are encouraged to bring a USB drive, or purchase one from the library.
+			Files cannot be saved to the computers' hard drives.
+		</p>
+		<p>
+			Vaughan Public Libraries assumes no responsibility for computer viruses that may have been introduced to the workstations.
+		</p>
+
+        	<h3>Self Check Stations</h3>
+		<p>Sign out library materials by yourself with your library card. Follow the step-by-step instructions on the screen to check out or renew your materials. When you are finished, you can choose to take the receipt which includes the due-dates.  <br/><br/><em>Not available at <?php echo $html->link("Kleinburg Library","/libraries/view/5"); ?>.</em>
+		</p>
+
+       		 <h3>Printing, Photocopy and Scanning</h3>
+		
+				<p>
+				Printing and photocopy are available at <?php echo $html->link("all VPL locations","/libraries"); ?>. Using VPL's <a href="https://webprint.vaughanpl.info">WebPrint site</a>, customers can now send a print job from their laptop, Android devices and even home computer, and pick it up at any branch except Kleinburg Library.</p>
+				
+				<ul><li>Black & White - $0.10 (letter/legal)</li><li>Colour<sup>*</sup> - $0.40 (letter/legal)</li><li>Scan<sup>*</sup>  - $0.05</li></ul>
+<p>
+			<em><sup>*</sup>&nbsp; Scanning, colour printing and colour photocopy are not available at <?php echo $html->link("Kleinburg Library","/libraries/view/5"); ?>.</em>
+
+		</p>
+		
+		
+        </div>
+	</div>
+
+
+	<div id="room" class="tab"><br/>
+		<h3><a href="javascript:toggleMin('meetingroom')">Meeting Room</a></h3>
+		<div id="meetingroom" class="entry" style="display: none">
+	        	<p>Many VPL branches have meeting rooms available for use. <br/>
+			
+			<img src="/img/icon-pdf.gif" alt="PDF" /><?php echo $html->link("Applicable Charges","/files/services/List_of_Charges.pdf"); ?><br/><br/>
+			<img src="/img/icon-pdf.gif" alt="PDF" /><?php echo $html->link("Application for use of meeting room","/files/services/meeting_room.pdf"); ?><br/><br/>
+			<img src="/img/icon-pdf.gif" alt="PDF" /><?php echo $html->link("Meeting room capacities","/files/services/meeting_cap.pdf"); ?><br/><br/>
+			<img src="/img/icon-pdf.gif" alt="PDF" /><?php echo $html->link("Application for CSO status", "https://www.vaughan.ca/services/recreation/General%20Documents/Facility%20Rentals/CSO%20Policy%20Brochure_12014.pdf");?><br/><br/>
+		<img src="/img/icon-pdf.gif" alt="PDF" /><?php echo $html->link("Operational Policy","/files/services/OperationalPolicy.pdf"); ?>
+
+			<br/><br/>If you would like to know more about this service, please contact your local branch at 905-653-READ (7323).</p>
+	        </div>
+
+
+
+	        <h3><a href="javascript:toggleMin('trainingroom')">Computer Training Room</a></h3>
+	        <div id="trainingroom" class="entry" style="display: none">
+			<p>These rooms are used for our <a href="/programs/index/category/4">computer training programs</a>. Bathurst Clark's room is open to the public between programs and Pierre Berton's room can be rented for meetings.
+	        	<br/><br/>
+			Available at:</p>
+			<ul>
+					<li><a href="/libraries/view/2">Bathurst Clark Resource Library</a></li>
+					<li><a href="/libraries/view/7">Pierre Berton Resource Library</a></li>
+				</ul>
+
+			
+			<div class="section_end">&nbsp;</div>
+	       </div>
+
+	        <h3><a href="javascript:toggleMin('studyroom')">Study Rooms</a></h3>
+	        <div id="studyroom" class="entry" style="display: none">
+			<p>Drop-in quiet study rooms are available to all members of the public.  Group Study rooms at Bathurst Clark Resource Library and Pierre Berton Resource Library are available on a first come - first served basis to anyone with a valid VPL library card.
+			<br/><br/>
+			Available at:</p>
+			<ul>
+				<li><a href="/libraries/view/1">Ansley Grove Library</a></li>
+				<li><a href="/libraries/view/2">Bathurst Clark Resource Library</a></li>
+				<li><a href="/libraries/view/7">Pierre Berton Resource Library</a></li>
+			</ul>
+
+
+			
+			<div class="section_end">&nbsp;</div>
+	       	</div>
+
+
+	       	<h3><a href="javascript:toggleMin('childrenroom')">Children's Program Room</a></h3>
+	       	<div id="childrenroom" class="entry" style="display: none">
+			<p>This is where we host our <a href="/programs/index/selected_events">Children's Programs</a> planned by library staff.  Consult <a href="/news_and_events/atl_guide">"At the Library"</a> Program Guide or call 905-653-READ (7323) for more information about programs.
+					</p>
+
+		<div class="section_end">&nbsp;</div>
+	        </div>
+
+	        <h3><a href="javascript:toggleMin('boardroom')">Board Room</a></h3>
+			       	<div id="boardroom" class="entry" style="display: none">
+					<p>Boardroom seats 18 people around the board table.  The optional IT package includes a computer and projector. A small kitchenette is available upon request.  Call 905-653-READ (7323) to inquire about rates and room availability.
+					<br/><br/>					
+			Available at:</p>
+			<ul>
+				<li><a href="/libraries/view/7">Pierre Berton Resource Library</a></li>
+						</ul>
+
+					
+
+				<div class="section_end">&nbsp;</div>
+	        </div>
+
+	        		<h3><a href="javascript:toggleMin('exhibit')">Exhibit Space</a></h3>
+				<div id="exhibit" class="entry" style="display: none">
+				<p>
+				VPL believes in providing access to cultural opportunities in the community by making exhibit space available to artists and community groups. Interested groups are encouraged to submit a completed <?php echo $html->link("Application for Exhibit Space","/files/exhibit_space.pdf"); ?> form to their preferred library location.
+				</p>
+				<p>Applicants may be asked to submit samples of their work before approval. Exhibit space will be allocated based on availability and identification of suitable display space at the discretion of VPL.
+				</p>
+	        </div>
+	</div>
+
+	<div id="proctor" class="tab">
+		<div class="entry">
+			<h3>Proctoring Examination Invigilation Guidelines</h3>
+				<p>
+				Proctoring service is available at select locations at Vaughan Public Libraries.  Each site will determine whether it can accommodate such requests. VPL charges $25.00 per exam, and this $25.00 fee does not include material or courier costs.
+</p>
+
+				<ol>
+								<li>It is the responsibility of the student to contact the library directly to inquire about the availability of proctoring services. The specific <strong>date, time and place of the exam</strong> must be confirmed at least three weeks in advance.</li>
+								<li>Exams must be proctored during library business hours.  Exams must be completed half an hour before closing.</li>
+								<li>The student must complete an <?php echo $html->link("application form","/proctor")?> and submit it to the library for approval.  A librarian will proctor an exam only if the application has been approved. </li>
+								<li>The <strong>examination package</strong> must be sent from the issuing institution directly to the library one week prior to the exam date.</li>
+								<li>The library will not accommodate an exam if it cannot meet operational conditions outlined by the Institution.</li>
+								<li>The library will not be liable for any missing items, papers, samples or other documents related to the exam.</li>
+								<li>The library will not accommodate an exam that requires specialized procedures such as the downloading of software to library's computers.</li>															<li>Students who require a proctor for an online exam must provide and use a laptop computer.  Written guidelines for online exams must be included in the examination package provided by the issuing institution.</li>
+								<li>The student is responsible for any incidental or additional expenses such as courier fees or postage charges. </li>
+								<li>The library will not provide reminders or notifications for an approved exam.  It is the responsibility of the student to arrive fifteen (15) minutes prior to the start of the exam.</li>
+				</ol>	
+				<p>If you would like to know more about this service, please contact your <?php echo $html->link("local branch","/libraries")?> at 905-653-READ (7323).</p>
+
+		</div>
+
+	</div>
+	
+	
+		<div id="club" class="tab">
+				<div class="entry">
+					<p>VPL members may borrow sets of books for their book clubs. </p>
+					<p>
+					There is a wide variety of books available for different age groups.
+					Book club sets are available for an extended loan period of four weeks.
+					To borrow book club sets, your book club needs to register with VPL's Books for Book Clubs.
+					</p>
+				</div>
+	
+				<div class="entry">
+					<h3>Register Your Club</h3>
+					<p>
+					Your book club's designated representative should complete the <a href="/book_for_book_club_registrations/add">online form</a>.
+					To register, you must be at least 16 years of age.
+					Persons under 16 years of age may have an adult register their group on their behalf.
+					</p>
+				</div>
+	
+				<div class="entry">
+					<h3>Book Clubs Designee Responsibilities</h3>
+					<p>As the contact person for your group:</p>
+					<ul>
+						<li>
+							You will be your Book Club's designated representative and be
+							the only person to request books for your Club;
+						</li>
+						<li>
+							You may reserve books for your upcoming book club meetings;
+						</li>
+						<li>
+							You will be notified by VPL when your books are available for
+							pick-up at your designated branch;
+						</li>
+						<li>
+							You will be notified by VPL of any problems with the bookings
+							for your Book Club;
+						</li>
+						<li>
+							You are responsible for telling your fellow Book Club members
+							when and where the books are available for pick-up;
+						</li>
+						<li>
+							You will notify VPL if your Book Club no longer needs
+							the books.
+						</li>
+					</ul>
+					<p>Your registration information will be kept on file for the purposes of running the "Books for Book Clubs" service.</p>
+				</div>
+	
+				<div class="entry">
+					<h3>Instructions to reserve and check out book sets</h3>
+					
+					<ul>
+						<li><a href="/books_for_book_clubs/index/adults">Book sets for Adult Book Clubs</a></li>
+						<li><a href="/books_for_book_clubs/index/teens">Book sets for Teen Book Clubs</a></li>
+						<li><a href="/books_for_book_clubs/index/kids">Book sets for Kids' Book Clubs</a></li>
+						<li><a href="/books_for_book_clubs/index/esl">Book sets for ESL Book Clubs</a></li>
+					</ul>
+					
+					<p>Here is the relevant information you need for Books for Book Clubs:</p>
+					<ul>
+						<li>
+							Indicate the name of the book, number of copies you want to borrow,
+							and the VPL branch for pick-up.
+						</li>
+						<li>
+							VPL will notify you if there are difficulties fulfilling your request
+							(e.g. the title is already in use) and will call you when the books are
+							ready for pick-up
+						</li>
+						<li>
+							You are responsible for telling your Book Club members
+							when and where the books are available for pick-up
+						</li>
+						<li>
+							Individual members of the Book Clubs should pick-up their copy of the book at the specified branch.
+							Books will be held under the name of your Book Club at the circulation desk in that branch
+						</li>
+						<li>
+							When individual group members pick-up their book,
+							they will be asked for the name of their Book Club
+							and the title of the book they will be reading
+						</li>
+						<li>
+							Individual Book Club members must be VPL members and
+							must bring their VPL Library Card to borrow materials.
+						</li>
+					</ul>
+				</div>
+				
+				<div class="entry">
+								<h3>Chinese Book Sets</h3>
+								<p>
+								Chinese book sets are available to borrow. Please browse <a href="/files/chineseBookSet.pdf" rel="external">book sets for Chinese book clubs</a> and contact Bathurst Clark Resource Library (905) 653-READ (7323) to reserve a Chinese book set. 
+								</p>
+				</div>
+	</div>
+<div id="homebound" class="tab">
+		<h3>Homebound Access</h3>
+		<div class="entry">
+		<p>Homebound people often rely on their spouse or caregiver, friends, or neighbours, to bring them materials from the library. VPL makes it easier for anyone who borrows library materials on behalf of a homebound person. The homebound person will be issued a VPL membership card that will be linked to the Homebound services on the Library's computer system. The homebound library user will then have access through their spouse, neighbour, or other nominee to the following services:</p>
+		   <ul>
+			<li>Longer loan periods</li>
+			<li>No Fines or overdue items</li>
+			<li>Flexibility in day, time, and frequency of visits</li>
+			<li>Record of homebound borrower's Reading Preferences</li>
+			<li>Printed list of borrowed items</li>
+			<li>Rating system to assist those selecting materials</li>
+			<li>Qualified Library staff to assist with selection of materials</li>
+		   </ul>
+		
+		<p>If you would like to know more about this service, please contact your local branch at 905-653-READ (7323).</p>
+		</div>
+		
+		<h3>Homebound Delivery</h3>
+				<div class="entry">
+				<p>Homebound individuals who do not have someone on whom they can rely to check materials out for them, can have the library brought to them. Qualified volunteers will deliver materials to your doorstep. This service can be used temporarily or on a permanent basis and is free of charge. Applications are available <a href="/files/homebound_reader.pdf" target="_blank">online</a>. For those wishing to use the Homebound Delivery Service or know someone who could benefit, please contact your local branch at 905-653-READ (7323).</p>
+				   
+		</div>
+	</div>
+	
+	<div id="cela" class="tab">
+			<h3>CELA Services</h3>
+			<div class="entry">
+<p>As a member of the <a href="http://www.celalibrary.ca/iguana/www.main.cls?surl=defaultCELA&language=eng" target="_blank">Centre for Equitable Library Access</a> (CELA), VPL offers access to over 85,000 items to seniors or anyone who has a visual, physical or learning disability that prevents them from reading conventional print. </p>
+			<p>Enjoy books, magazines, newspapers and described videos in a variety of formats including audio, e-text, downloadable and braille formats. </p>
+			<p>To set up an account with <a href="http://www.celalibrary.ca/iguana/www.main.cls?surl=defaultCELA&language=eng" target="_blank">CELA</a>, please ask staff at the Service Desk for assistance. VPL membership is also required.</p>
+			</div>
+	</div>
+</div></div>
+		&nbsp;
+	</div>
+	<div class="closing"></div>
+</div>

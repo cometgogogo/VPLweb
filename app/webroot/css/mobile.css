@@ -1,0 +1,80 @@
+/* Page layout: General */
+body {background-color:#ffffff;margin: 0px 0px 0px 0px;font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10pt !important; color:#000000;}
+
+.closing {background-repeat:no-repeat;float:right;padding:30px 15px 15px 15px}
+.section_closing {background-repeat:no-repeat;float:right;padding:5px 15px 0px 0px}
+
+
+a {color: #1966a5;}
+img {border-style:none;}
+hr {color:#ccdce8;border-style:solid;clear:both}
+
+div#wrapper {padding: 0 0 0 0; margin: 0px 0px 0px 0px;}
+
+div#header {width: 100%; float: left; background-image:url(/img/mobile/bkgd-gradient-tile.jpg);background-repeat:repeat; height: 50px; margin-bottom: 10px}
+div#header img {display: inline; float: left; height: 50px}
+h1 {display: inline; font-size:14pt;font-weight:bold; text-transform:uppercase; color:#333333; margin:0px 0px 0px 0px;}
+h3 {font-size:12pt;font-weight:bold; margin: 0 0 5px 0; padding:0}
+h5 {font-size:10pt; padding: 0px; margin: 0px}
+
+
+div#content {width: 100%; padding: 5px 5px 5px 5px}
+
+div#content img {margin: 2px 5px 2px 0px}
+
+form {width:99%; display:block; padding:0px 0px 0px 0px; border-style:none;vertical-align:top}
+fieldset {float:none; padding:5px 0px 7px 5px; margin:3px 0px 0px 0px; width:100%; display: block; border-style:none;}
+fieldset legend {margin:10px 0px 10px 0px; font-size:12pt; color:#666666; font-weight:bold}
+fieldset .field_label {color:#999999; font-size:10pt; border:#CCCCCC solid; border-width:1px 0px 0px 0px; width:100px; clear:left; float:left; padding:2px 3px 2px 0px; margin:2px 2px 0px 0px; text-align:right; font-weight:bold; background:#EEEEEE}
+fieldset .field_label.title {background:none}
+fieldset .field_desc {clear: both}
+fieldset .field_input {border-style:none; padding:2px 2px 2px 2px; border-width:1px; border-color:#3333FF; float:left; margin:2px 0px 0px 0px; background-color:#d8e9f6}
+fieldset ul {margin:0px 0px 0px 0px; padding:0px 0px 0px 10px; border:#000000 1px none}
+fieldset li {margin:5px 0px 5px 10px; border:#660066 1px none}
+fieldset .field {clear: both}
+
+fieldset input {font-size:10pt}
+fieldset select {font-size:10pt}
+
+.submit_button {width: 100px; border:3px solid; margin-top:5px; padding-top:5px; padding-bottom:5px; float:right; background:#1966a5; color:#FFFFFF; font-weight:bold; font-size: 16px; }
+
+
+.navbar {width:100%; border-style:none;border-width:1px;border-color:#ccdce8;float:left;margin-top:5px;margin-bottom:2px;}
+.navbar a {color: #1966a5; text-decoration: none; width: 100%; display: block}
+
+.navbar ul {margin:0px;padding:0px;}
+
+.navbar li {list-style-type: none;background-image:url(/img/mobile/next.gif); background-position: 95% 10%; background-repeat:no-repeat; font-size:10pt; border-bottom-style:dotted;border-bottom-width:0px;border-color:#CCCCCC;display:block; padding-bottom:5px;padding-right:2px;margin-left:0px;}
+
+.navbar img {display: inline; width: 30px; height: 30px;float:left; margin-right: 5px}
+.navbar .desc {padding-top: 0px; margin-top: 0px; display: inline; float: left }
+.navbar .title {font-size:100%; }
+.navbar .subtitle {color: #000000; font-size:80%; font-style:italic; }
+.navbar .result {padding: 0px; margin: 0px; background-image:url(/img/mobile/pin.gif); background-position: 97% 5%; background-repeat:no-repeat;}
+
+
+div.sub_navbar {width:100%; }
+div.sub_navbar img {display: inline; width: 64px; float:left}
+div.sub_navbar ul {clear: both; padding: 0px; margin: 0px} 
+div.sub_navbar ul li.database {list-style-type: none; padding: 0px; margin: 0px; background-image:url(/img/mobile/next.gif); background-position: 97% 5%; background-repeat:no-repeat;}
+div.sub_navbar ul li.app {list-style-type: none; padding-left: 0px; margin: 0px; background-image:url(/img/mobile/download.png);background-position: 60% 50%; background-repeat:no-repeat;}
+div.sub_navbar .title {font-weight: bold;  margin: 0px; color: #5B492E;}
+div.sub_navbar .subtitle {font-size: 80%; font-style: italic; padding-top: 5px; color: #5B492E;} 
+div.sub_navbar a {text-decoration: none;}
+div.app_link {padding-bottom: 2px}
+
+
+.navbar .entry {color: #000000; padding-left: 2px;}
+
+.footnotes {width: 100%; float:left; margin:0px 0px 20px 2px; clear: both}
+div.footnotes ol {margin:0px 0px 0px 0px; padding: 0px 0px 0px 20px;}
+div.footnotes li {border:#660066 1px none; }
+div.field_purpose_description {display: block; clear: both; padding-top: 0px}
+div.field_purpose_description ul {margin:0px 0px 0px 0px; padding: 0px 0px 0px 20px;}
+
+
+div#footer {position:relative; bottom:5px; width: 100%; float:left; text-align: center; padding-top: 3px; padding-bottom: 3px;}
+
+#control_javascript {display:none}
+
+
